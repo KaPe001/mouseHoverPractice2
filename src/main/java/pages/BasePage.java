@@ -12,16 +12,14 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.Locale;
-import java.util.Random;
 
 public class BasePage {
 
     public WebDriver driver;
     public WebDriverWait wait;
-    Random rnd = new Random();
     FakeValuesService fakeValuesService = new FakeValuesService(
             new Locale("en-GB"), new RandomService());
-    private Logger logger = LoggerFactory.getLogger(BasePage.class);
+    private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
