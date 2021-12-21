@@ -23,19 +23,15 @@ public class BasePage {
             new Locale("en-GB"), new RandomService());
     private Logger logger = LoggerFactory.getLogger(BasePage.class);
 
-    public BasePage(){
-    }
-
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
     public void clickOnElement (WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-        //logger.info("Element {} clicked", element.getText());
     }
 
     public void clickOnElementToSignUserOut(WebElement element){

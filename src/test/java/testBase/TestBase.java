@@ -1,3 +1,5 @@
+package testBase;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,6 +10,8 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.WebListener;
+
+import java.time.Duration;
 
 public class TestBase {
     public static Logger logger = LoggerFactory.getLogger(TestBase.class);

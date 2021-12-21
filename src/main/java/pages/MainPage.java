@@ -9,12 +9,6 @@ import org.openqa.selenium.support.events.internal.EventFiringMouse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
-
 public class MainPage extends BasePage{
     Logger logger = LoggerFactory.getLogger(MainPage.class);
 

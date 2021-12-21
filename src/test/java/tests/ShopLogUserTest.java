@@ -1,13 +1,16 @@
+package tests;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.RegisterPage;
+import testBase.TestBase;
 
 @Execution(ExecutionMode.CONCURRENT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class ShopLogUserTest extends TestBase{
+public class ShopLogUserTest extends TestBase {
 
     @Order(1)
     @DisplayName("log in existing user")
