@@ -16,10 +16,11 @@ pipeline {
                 echo 'OK test'
             }
         }
-        post {
-            always {
-                junit '**/target/surefire-reports/TEST-*.xml'
-                }
-            }
+    }
+    post {
+        always {
+             junit '**/target/surefire-reports/TEST-*.xml'
+             }
         }
+    }
 }
