@@ -16,8 +16,8 @@ pipeline {
                 echo 'OK test'
             }
         }
-        post{
-            always{
+        post {
+            always {
                 junit '**/target/surefire-reports/TEST-*.xml'
                 }
             }
